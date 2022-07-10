@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM  from "react-dom";
+import App from "./App";
 
-function App(){
-  return React.createElement("h1" , null , "This is React App.");
-}
-
-ReactDOM.render(React.createElement(App),document.querySelector("#root"));
-
+ReactDOM.render(
+<React.StrictMode>   
+  <App/>
+</React.StrictMode>,
+document.querySelector("#root")
+);
