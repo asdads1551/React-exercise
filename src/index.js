@@ -4,7 +4,7 @@ import App from "./App";
 
 ReactDOM.render(
 <React.StrictMode>   
-  <App/>
+  <App/> //component
 </React.StrictMode>,
 document.querySelector("#root")
 );
