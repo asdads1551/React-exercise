@@ -5,7 +5,7 @@ const info = ({messages , setMessages}) => {
   return (
     <div>
     {messages.map((msg)=>(
-        <Message msg={msg}/>
+        <Message msg={msg} messages={messages} setMessages={setMessages}/>
     ))}    
     </div>
   )
