@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Message  from './Message';
 
-function info() {
+const info = ({messages , setMessages}) => {
   return (
-    <div>info</div>
+    <div>
+    {messages.map((msg)=>(
+        <Message msg={msg}/>
+    ))}    
+    </div>
   )
 }
 

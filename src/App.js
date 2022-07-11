@@ -1,21 +1,14 @@
-import React, {useState} from "react"; 
+import React, {useState} from "react";
+import Create from "./Create";
+import Info  from "./info";
 
 
 const App = ()  => {
-//State 
-
-
-let [name,setName] = useState("Mike Wang");
-const changeNameHandler = ()=>{
-  setName("Jaanus Zeng");
-}
-
-
+  let [messages,setMessages] = useState([]);
   return(
     <div>
-        <h1>{name}</h1>
-        <button onClick={changeNameHandler}> Change </button>
-        <p>{name}</p>
+        <Create messages={messages} setMessages={setMessages}/>  
+        <Info messages={messages} setMessages={setMessages}/>
     </div>
   );
 };
