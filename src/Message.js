@@ -1,11 +1,15 @@
 import React from "react";
 import "./styles/style.css";
 
-const Message = ({msg})=>{
+const Message = ({msg, messages,setMessages})=>{
+    const deleteHandler = () => {
+        setMessages(messages.filter((m)=>m.id !==msg.id));
+    };
+    
     return (
         <div className="msg">
-            <p>{msg}</p>
-            <button> Delete </button>
+            <p>{msg.input}</p>
+            <button onClick={deleteHandler}> Delete </button>
         </div>
     );
 

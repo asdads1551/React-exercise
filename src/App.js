@@ -1,14 +1,24 @@
-import React, {useState} from "react";
-import Create from "./Create";
-import Info  from "./info";
+import React, {useState,useEffect} from "react";
 
 
 const App = ()  => {
-  let [messages,setMessages] = useState([]);
+  let [name , setName ] = useState("Mike Hung");
+  const changeName = () =>{
+    setName("Janus Zeng")
+  }
+
+  //useEffect
+  useEffect(()=>{
+    console.log("useEffect function is running ");
+  },
+  [name]
+  
+  );
+
   return(
     <div>
-        <Create messages={messages} setMessages={setMessages}/>  
-        <Info messages={messages} setMessages={setMessages}/>
+        <h1>{ name }</h1>
+        <button onClick={changeName}>Change Name</button>
     </div>
   );
 };
